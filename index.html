@@ -1,0 +1,225 @@
+<!--
+        Project details:
+        1. Responsive navbar with dropdown menu
+        2. Css-only Mobile menu with trigger button (status tracked by checkbox)
+        3. Css-only slider animation
+        4. Catalog section with responsive Grid
+        5. Products showcased on card
+        6. Scaling up product images on hover
+        7. Responsive input form with basic html validation
+        8. Custom designed scroll bar for form
+    -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Pharmacy</title>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <h1>Pharmacy</h1>
+        </div>
+    </header>
+
+    <nav>
+
+        <div class="navigation container">
+
+            <div class="mobile-menu-toggler">
+                <input type="checkbox" class="menu-toggler">
+                <div class="hamburger">
+                    <div></div>
+                </div>
+                <div class="mobile-menu">
+                    <a href="#">Home</a>
+                    <div class="m-dropdown-menu">
+                        <a href="#" class="m-dropdown-trigger">Our Medicines</a>
+                        <div class="m-dropdown-content">
+                            <a href="#">Fever</a>
+                            <a href="#">Muscles Pain</a>
+                            <a href="#">Cold & Cough</a>
+                        </div>
+                    </div>
+                    <div class="m-dropdown-menu">
+                        <a href="#" class="m-dropdown-trigger">Health Care</a>
+                        <div class="m-dropdown-content">
+                            <a href="#">Baby Care</a>
+                            <a href="#">Skin Care</a>
+                            <a href="#">Home Care</a>
+                            <a href="#">Personal Care</a>
+                            <a href="#">Pet Care</a>
+                        </div>
+                    </div>
+                    <a href="lab.html">Lab Test</a>
+                </div>
+            </div>
+
+            <div class="navbar">
+
+                <a href="#">Home</a>
+                <div class="dropdown-menu">
+                    <a href="#" class="dropdown-trigger">Our Medicines</a>
+                    <div class="dropdown-content">
+                        <a href="#">Fever</a>
+                        <a href="#">Muscles Pain</a>
+                        <a href="#">Cold & Cough</a>
+                    </div>
+                </div>
+                <div class="dropdown-menu">
+                    <a href="#" class="dropdown-trigger">Health Care</a>
+                    <div class="dropdown-content">
+                        <a href="#">Baby Care</a>
+                        <a href="#">Skin Care</a>
+                        <a href="#">Home Care</a>
+                        <a href="#">Personal Care</a>
+                        <a href="#">Pet Care</a>
+                    </div>
+                </div>
+                <a href="lab.html">Lab Test</a>
+
+            </div>
+
+        </div>
+
+    </nav>
+    
+    <section id="hero">
+
+        <div class="container">
+
+            <div id="slider">
+
+                <div class="slide">
+                  <img src="assets/img/animation/ani1.jpg" alt="">
+                </div>
+                <div class="slide">
+                    <img src="assets/img/animation/ani2.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="assets/img/animation/ani3.jpg" alt="">
+                </div>
+                <div class="slide">
+                    <img src="assets/img/animation/ani4.jpg" alt="">
+                </div>
+                <div class="slide">
+                    <img src="assets/img/animation/ani5.jpg" alt="">
+                </div>
+        
+            </div>
+
+        </div>
+        
+    </section>
+
+    <section id="covid-care">
+
+        <div class="container">
+            <h2 class="section-title">Covid Care</h2>
+            <div class="grid">
+                <div class="card">
+                    <h4>Covid test Kit</h4>
+                    <div class="img-holder">
+                        <img src="assets/img/products/c1.jpg" alt="">
+                    </div>
+                    <p class="regular-price">Rs. 700</p>
+                    <p class="sale-price">Rs. 680</p>
+                    <button>Add to Cart</button>
+                </div>
+
+                <div class="card">
+                    <h4>Covid Essentials</h4>
+                    <div class="img-holder">
+                        <img src="assets/img/products/c2.jpg" alt="">
+                    </div>
+                    <p class="regular-price">Rs. 700</p>
+                    <p class="sale-price">Rs. 680</p>
+                    <button>Add to Cart</button>
+                </div>
+
+                <div class="card">
+                    <h4>Sanitizer Bottle</h4>
+                    <div class="img-holder">
+                        <img src="assets/img/products/c3.jpg" alt="">
+                    </div>
+                    <p class="regular-price">Rs. 700</p>
+                    <p class="sale-price">Rs. 680</p>
+                    <button>Add to Cart</button>
+                </div>
+
+                <div class="card">
+                    <h4>Mask</h4>
+                    <div class="img-holder">
+                        <img src="assets/img/products/c4.jpg" alt="">
+                    </div>
+                    <p class="regular-price">Rs. 700</p>
+                    <p class="sale-price">Rs. 680</p>
+                    <button>Add to Cart</button>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <section id="diabetes-care">
+
+        <div class="container">
+            <h2 class="section-title">Diabetes Care</h2>
+            <div class="grid">
+                <div class="card">
+                    <h4>BGR 34 Aimil</h4>
+                    <div class="img-holder">
+                        <img src="assets/img/products/d1.jpg" alt="">
+                    </div>
+                    <p class="regular-price">Rs. 700</p>
+                    <p class="sale-price">Rs. 680</p>
+                    <button>Add to Cart</button>
+                </div>
+
+                <div class="card">
+                    <h4>Chavanprakash</h4>
+                    <div class="img-holder">
+                        <img src="assets/img/products/d2.jpg" alt="">
+                    </div>
+                    <p class="regular-price">Rs. 700</p>
+                    <p class="sale-price">Rs. 680</p>
+                    <button>Add to Cart</button>
+                </div>
+
+                <div class="card">
+                    <h4>Colgate</h4>
+                    <div class="img-holder">
+                        <img src="assets/img/products/d3.jpg" alt="">
+                    </div>
+                    <p class="regular-price">Rs. 700</p>
+                    <p class="sale-price">Rs. 680</p>
+                    <button>Add to Cart</button>
+                </div>
+
+                <div class="card">
+                    <h4>Unibic</h4>
+                    <div class="img-holder">
+                        <img src="assets/img/products/d4.png" alt="">
+                    </div>
+                    <p class="regular-price">Rs. 700</p>
+                    <p class="sale-price">Rs. 680</p>
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <footer>
+        <div class="copyright">
+            <p>@ copyright. Only for demonstration purposes</p>
+        </div>
+    </footer>
+
+</body>
+</html>

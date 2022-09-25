@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/lab.css">
+    <title>Lab Test</title>
+</head>
+<body>
+
+    <section id="lab-form">
+        
+        
+        <form action="" id="labForm">
+
+            <img src="assets/img/labtest/lab-test.jpg" alt="">
+
+            <div class="form-fields">
+                <h2>1. You Contact Details</h2>
+            <div class="row">
+                <div class="col">
+                    <input type="text" class="form-control" name="" id="" placeholder="Full Name" required >
+                </div>
+                <div class="col">
+                    <input type="text" class="form-control" name="" id="" placeholder="Patient's Id if exists" >
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <input type="number" min="6000000000" max="9999999999" class="form-control" name="" id="" placeholder="Contact Number" required >
+                </div>
+                <div class="col">
+                    <input type="email" class="form-control" name="" id="" placeholder="Email Id" required >
+                </div>
+            </div>
+
+            <h2>2. Address</h2>
+            <div class="row">
+                <div class="col">
+                    <input type="number" class="form-control" name="" id="" placeholder="House Number" required >
+                </div>
+                <div class="col">
+                    <input type="text" class="form-control" name="" id="" placeholder="Street" required >
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <input type="text" class="form-control" name="" id="" placeholder="Area" required >
+                </div>
+                <div class="col">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <label for="">District</label>
+                    <select name="district" id="district" required>
+                        <option value="">Choose</option>
+                        <option value="1">Prakasam</option>
+                        <option value="2">Guntur</option>
+                        <option value="3">Nellore</option>
+                        <option value="4">Chittor</option>
+                        <option value="5">Kurnool</option>
+                        <option value="6">Anantapur</option>
+                        <option value="7">Srikakulam</option>
+                        <option value="8">WestGodavari</option>
+                        <option value="9">EastGodavari</option>
+                        <option value="10">Visakhapatnam</option>
+                    </select>
+                </div>
+                <div class="col"></div>
+            </div>
+
+            <h2>3. Test Type</h2>
+            <div id="error">( Check atleast one box without fail )</div>
+            <div class="row test-list">
+                <div class="checkbox-option">
+                    <input type="checkbox" class="form-control" name="chkLabTest" id="chkLabTest-1" value="cbc">
+                    <label for="chkLabTest-1">CBC</label>
+                </div>
+                <div class="checkbox-option">
+                    <input type="checkbox" class="form-control" name="chkLabTest" id="chkLabTest-2" value="urine">
+                    <label for="chkLabTest-2">Complete Urine</label>
+                </div>
+                <div class="checkbox-option">
+                    <input type="checkbox" class="form-control" name="chkLabTest" id="chkLabTest-3" value="lipid">
+                    <label for="chkLabTest-3">Lipid Profile</label>
+                </div>
+                <div class="checkbox-option">
+                    <input type="checkbox" class="form-control" name="chkLabTest" id="chkLabTest-4" value="tsh">
+                    <label for="chkLabTest-4">Thyroid Stimulating Hormone(TSH)</label>
+                </div>
+                <div class="checkbox-option">
+                    <input type="checkbox" class="form-control" name="chkLabTest" id="chkLabTest-5" value="glucose">
+                    <label for="chkLabTest-5">Glucose Test</label>
+                </div>
+            </div>
+
+            <h2>4. Do you want a hard copy of the report also?</h2>
+            <div class="row">
+                <div class="col">
+                    <div class="radio-option">
+                        <input type="radio" class="form-control" name="printed-report" id="selected-test" value="No" checked> <label for="">No</label>
+                        <input type="radio" class="form-control" name="printed-report" id="selected-test" value="Yes"> <label for="">Yes</label>
+                    </div>
+                </div>
+            </div>
+
+            <h2>5. Select Your Comfortable Date and Time</h2>
+            <div class="row">
+                <div class="col">
+                    <label for="">Preffered Date</label>
+                    <input type="date" required>
+                </div>
+                <div class="col">
+                    <label for="">Preffered Time</label>
+                    <input type="time" required>
+                </div>
+            </div>
+            </div>
+
+        </form>
+
+        <div class="action">
+            <button form="labForm" type="reset" title="Clear form fields">Reset</button>
+            <button form="labForm" type="submit" title="Save form data">Submit</button>
+        </div>
+
+    </section>
+
+    <script type="text/javascript">
+        (function() {
+            const form = document.querySelector('#labForm');
+            const checkboxes = form.querySelectorAll('input[type=checkbox]');
+            const checkboxLength = checkboxes.length;
+            const firstCheckbox = checkboxLength > 0 ? checkboxes[0] : null;
+
+            function init() {
+                if (firstCheckbox) {
+                    for (let i = 0; i < checkboxLength; i++) {
+                        checkboxes[i].addEventListener('change', checkValidity);
+                    }
+                    checkValidity();
+                }
+            }
+            function isChecked() {
+                for (let i = 0; i < checkboxLength; i++) {
+                    if (checkboxes[i].checked) return true;
+                }
+                return false;
+            }
+            function checkValidity() {
+                const errorMessage = !isChecked() ? 'Check atleast one box without fail' : '';
+                firstCheckbox.setCustomValidity(errorMessage);
+            }
+            init();
+        })();
+    </script>
+    
+</body>
+</html>
